@@ -62,4 +62,6 @@ for file in media_list:
     os.system(encode)
     new_dest = dest.replace(recode,network_dest)
     shutil.copyfile(dest,new_dest)
+    os.remove(source) 
+    os.remove(dest) 
 
