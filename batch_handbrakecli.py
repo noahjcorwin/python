@@ -51,8 +51,6 @@ for m in media_files:
             media_list += [full_path]
 
 for file in media_list:
-    with open(template) as f:
-        json_template = json.load(f)
     file_name = file.split(network_source + '/')[-1]
     source = recode + '/'+ file_name
     dest = source.replace('1080p','720p')
