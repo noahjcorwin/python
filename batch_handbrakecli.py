@@ -55,7 +55,7 @@ for file in media_list:
     source = recode + '/'+ file_name
     dest = source.replace('1080p','720p')
     if '264' in dest:
-        dest = source.replace('264','265')
+        dest = dest.replace('264','265')
     args = f" -i {source} -o {dest} -e {encoder} -f {container} -q {quality} -r {framerate} -E {audio} --audio-copy-mask {acm} --audio-fallback {afb} -Y {maxheight}"
     shutil.copyfile(file,source)
     encode = hbcli + args
